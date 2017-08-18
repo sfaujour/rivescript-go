@@ -66,6 +66,10 @@ func (rs *RiveScript) Reply(username, message string) (string, error) {
 	return reply, nil
 }
 
+func (rs *RiveScript) GetReply(username string, message string) (string, error) {
+	return rs.getReply(username, message, false, 0)
+}
+
 /*
 getReply is the internal logic behind Reply().
 
